@@ -1,0 +1,60 @@
+#!/bin/bash
+<< com
+# simple loop
+for i in {1..10}
+do
+echo "$i Shell Script"
+done
+com
+
+<< com
+#multiplation table
+read -p "Enter the Number : " n
+for i in {1..10}
+do
+echo "$i x 5 = $((i*n))"
+done
+com
+
+<<com
+#factorial
+read -p "Enter the Number : " n
+fact=1
+while [ $n -gt 1 ]
+do
+	fact=$((fact*n))
+	n=$((n-1))
+done
+echo "$fact"
+com
+
+<< com
+#untill
+i=1
+until [ $i -gt 10 ]
+do
+echo $i
+((i++))
+done
+com
+
+<< com
+#factorial using until
+n=1
+fact=1
+until [ $n -gt 5 ]
+do
+fact=$((fact*n))
+((n++))
+done
+echo $fact
+com
+
+#multiplication table using until
+read -p "Enter the number : " n
+i=1
+until [ $i -gt 10 ]
+do
+echo "$n x $i = $((i*n))"
+((i++))
+done

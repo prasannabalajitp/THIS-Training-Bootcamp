@@ -1,0 +1,77 @@
+#!/bin/bash
+
+<< com
+#performing calculation on output
+read -p "1st num = " n1
+read -p "2st num = " n2
+sum=$((n1+n2))
+pow=$((n1**n2))
+echo "Sum = $sum"
+echo "$n1 power $n2 = $pow"
+echo $((n1+=10))
+echo $n2
+com
+
+<< com
+#using let keyword
+n1=8
+n2=2
+echo "1st num = $n1"
+echo "2nd num = $n2"
+let z=$((n1**n2))
+echo "n1 power ne with let variable : $z"
+com
+
+<< com
+#greatest of 2 num
+read -p "Enter n1 : " n1
+read -p "Enter n2 : " n2
+
+if [ $n1 -gt $n2 ]
+then
+echo "$n1 is greater than $n2"
+else
+echo "$n1 is less than $n2"
+fi
+com
+
+<< com
+#greates of 3 num
+read -p "Enter n1 : " n1
+read -p "Enter n2 : " n2
+read -p "Enter n3 : " n3
+
+if [ $n1 -gt $n2 -a $n1 -gt $n3 ] # [ $n1 -gt $n2 ] && [ $n1 -gt $n3 ]
+then
+echo "$n1 is greatest"
+elif [ $n2 -gt $n3 ]
+then
+echo "$n2 is greatest"
+else
+echo "$n3 is greatest"
+fi
+com
+
+<< com
+#user input to file name
+read -p "Enter the file name : " fname
+cm=$(find Shivakumar -name "f1.txt")
+echo $cm 
+echo $fname
+if [ $cm == $fname ]
+then
+echo "File found"
+else
+then "File not Found"
+fi
+com
+
+<< com
+echo "File Name: $0"
+echo "First Argument: $1"
+echo "Second Argument: $2"
+sleep 5s
+echo "Total Arguments: $@"
+echo "All Argument: $*"
+echo "Total no. Argument: $#"
+com

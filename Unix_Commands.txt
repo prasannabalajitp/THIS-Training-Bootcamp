@@ -1,0 +1,20 @@
+sort svn_wndr.txt > sorted.txt
+cat sorted.txt
+--------------------------------------
+sort -r svn_wndr.txt > rev_srt.txt
+cat rev_srt.txt
+--------------------------------------
+cut -d- -f2 name_age.txt
+--------------------------------------
+cat happy.txt | grep "[happy]"
+--------------------------------------
+tree Shivakumar
+--------------------------------------
+cat happy.txt | wc
+--------------------------------------
+cat copied.txt | grep "[0-9]"
+--------------------------------------
+cat rym.txt | grep "[0-9]" | tr -d [:digit:] > output.txt
+cat output.txt
+--------------------------------------
+cat happy.txt | less -N
