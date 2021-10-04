@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Example</title>
+</head>
+<body>
+<form action="/src/main/webapp/index1.html" method="get">
+    <label>First Name : </label>
+    <input type="text" name="fname" id="fname"><br>
+    <label>Last Name : </label>
+    <input type="text" name="lname" id="lname"><br>
+    <label>Password : </label>
+    <input type="password" name="pws" id="pws"><br>
+    <input type="radio" id="fruit" name="fruit" value="fruit">
+    <label for="fruit">APPLE</label>
+    <input type="radio" id="fruit1" name="fruit1" value="fruit1">
+    <label for="fruit">GRAPES</label>
+    <input type="checkbox" id="vaccin1" name="vaccin1" value="vaccin1">
+    <label for="vaccin1">Completed 1st dose of Vaccination</label>
+    <input type="checkbox" id="vaccin2" name="vaccin2" value="vaccin2">
+    <label for="vaccin2">Completed 2nd dose of Vaccination</label>
+    <input type="checkbox" id="notcomplited" name="notcomplited" value="2">
+    <label for="notcomplited">not completed</label>
+    <br>
+    <br>
+    <label for doj>join date</label>
+    <input type="date" id="doj" name="doj">
+    <br>
+    <br>
+    <label for qty>Quantity (between 1-5)</label>
+    <input type="number" id="qty" name="qty" min="1" max="5">
+    <br>
+    <br>
+    <label for file="myfile"> select the file form the local drive</label>
+    <input type="file" id="myfile" name="myfile" multiple>
+    <br>
+    <br>
+    <label for="mymail">Enter your email</label>
+    <input type="email" id="mymail" name="mymail">
+
+
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
