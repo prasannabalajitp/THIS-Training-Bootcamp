@@ -32,6 +32,8 @@
 
     }
     </style>
+    
+                                         <!--JAVASCRIPT BEGINS-->
     <script type='text/javascript'>
 function addPassengers()
 {
@@ -168,7 +170,7 @@ function addPassengers()
 
 </div>
 
-                                                <!--JAVASCRIPT BEGINS-->
+                                               
 
 </body>
 </html>
