@@ -3,41 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Booking ticket</title>
-    <style>
-        button {
-
-      background-color: #4caf50;
-
-      color: white;
-
-      padding: 14px 20px;
-
-      margin: 8px 0;
-
-      border: none;
-
-      /* cursor: pointer; */
-
-      //width: 100%;
-
-    }
-     button:hover {
-
-      opacity: 0.8;
-
-    }
-    #pass:hover{
-        color:red;
-        font-weight:bold;
-
-    }
-    </style>
-    
-                                         <!--JAVASCRIPT BEGINS-->
+    <link rel="stylesheet" href="/src/main/webapp/styles.css">
+    <link rel="stylesheet" href="/path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script type='text/javascript'>
 function addPassengers()
 {
-    // Number of inputs to create
+        // Number of inputs to create
     var number = document.getElementById("number").value;
 
     // Container where dynamic content will be placed
@@ -68,13 +40,18 @@ function addPassengers()
         container.appendChild(input1);
 
         //TO  CREATE THE GENDER RADIO BUTTON
+
         container.appendChild(document.createTextNode("\tGender : "));
+        const favicon = document.querySelector('[rel=icon]');
         var input2 = document.createElement("input");
         input2.type = "radio";
         input2.value = "Male" + i;
         input2.name = "Male" + i;
         container.appendChild(input2);
+
         container.appendChild(document.createTextNode(" Male "));
+        //container.appendChild("<i class="fas fa-male" aria-hidden="true"></i>");
+
 
         //For displaying the Female RADIO button
         var input2 = document.createElement("input");
@@ -92,25 +69,26 @@ function addPassengers()
 </script>
 
 </head>
-<body style="background-color:#ebebeb;">
+<body>
 <img src="/src/main/webapp/img/icon.png" alt="icon" style="float:left;">
 <img src="https://www.irctc.co.in/nget/assets/images/logo.png" alt="irctc_icon" style="float:right;width:120px;height:140px;padding-right:50px;padding-top:5px;">
                                                 <!--HEADINGS-->
 <h1 style="color:blue;text-align:center;font-size:50px;padding-top:35px;">ONLINE RAIL TICKET BOOKING PORTAL</h1>
 
                                                 <!-MARQUEE FIELD--->
-<div style="background-color:#ffff00; color:red;">
-    <sub style="font-weight:bold; font-size:20px;"><marquee scrollamount="10">Ticket Booking Portal for the Passengers</marquee></sub>
+<div>
+    <sub class="supplementary"><marquee scrollamount="10"  class="scrolltext">Ticket Booking Portal for the Passengers</marquee></sub>
 </div>
                                                 <!-FORM BEGINS--->
 <form name="bookingticket" action="" method="post" id="container">
-    <h3 align="center" style="color:SlateBlue;font-weight:bold;font-size:35px;">ENTER THE TRAIN DETAILS HERE...</h3><br>
+    <h3 align="center" class="detailheader">ENTER THE TRAIN DETAILS HERE...</h3><br>
     <table align="center">
         <tr>
-            <td style="font-size:30px;">Train Number</td>
-            <td style="font-weight:bold;font-size:20px;">:</td>
+
+            <td style=""><i class="fas fa-train"></i>&nbsp;&nbsp;Train Number</td>
+
             <td>
-                <select style="font-size:20px;">
+                <select>    <!--NEED TO CHANGE-->
                     <option style="text-align:center;">--select--</option>
                     <option>1001 - SHATABDI Express (BGL-DLH) </option>
                     <option>1002 - SHATABDI Express (DLH-BGL)</option>
@@ -122,30 +100,15 @@ function addPassengers()
             </td>
         </tr>
         <tr>
-            <td style="font-size:30px;">Travel Date</td>
-            <td style="font-weight:bold;font-size:20px;"    >:</td>
+            <td><i class="far fa-calendar-alt"></i>    Travel Date</td>
+
             <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" id="travel_date" min="2021-10-7" style="font-size:25px;" required>
+                <input type="date" id="travel_date" min="2021-10-7" required>
             </td>
         </tr>
     </table>
 
 
-<!--    <div style="padding-left:400px;font-size:30px;">
-        Train Number :&nbsp;&nbsp;&nbsp;<select style="font-size:20px;">
-                                            <option style="text-align:center;">&#45;&#45;select&#45;&#45;</option>
-                                            <option>1001-SHATABDI EXPRESS(BGL-DLH) </option>
-                                            <option>1002-SHATABDI EXPRESS(DLH-BGL)</option>
-                                            <option>1003-UDYAN EXPRESS(BGL-MUM)</option>
-                                            <option>1004-UDYAN EXPRESS(MUM-BGL)</option>
-                                            <option>1005-BRINDAVAN EXPRESS(BGL-CHN)</option>
-                                            <option>1006-BRINDAVAN EXPRESS(CHN-BGL)</option>
-                                        </select>
-                                                &lt;!&ndash;TRAVEL DETAILS&ndash;&gt;
-    </div><br>
-    <div style="padding-left:400px;font-size:30px;">
-        Travel Date :&nbsp;&nbsp;&nbsp;<input type="date" min="2021-10-7" style="font-size:25px;" required>
-    </div>-->
 </form>
 <br>
 <br>
@@ -153,24 +116,24 @@ function addPassengers()
 
 <hr width="1000px">
                                                 <!--PASSENGER DETAILS-->
-    <h3 align="center" style="color:SlateBlue;font-weight:bold;font-size:35px;">ENTER THE PASSENGER DETAILS HERE...</h3>
-    <div align="center">
-<!--        Enter the Number of Passengers : <input type="number" id="number" required>-->
-    </div>
-<div align="center" style="padding-left:30px;font-size:25px;">
+    <h3 align="center" class="detailheader">ENTER THE PASSENGER DETAILS HERE...</h3>
+
+    <div align="center" style="padding-left:30px;"><i class="fas fa-user-friends"></i>
     Enter the Number of Passengers : <input type="text" id="number" name="number" value="" style="font-size:25px;" required> (Max. 12 Persons)
     <br><br>
     <a href="#" id="pass" onclick="addPassengers()" style="text-decoration:none;#pass:hover{color:red;text-decoration:none;-webkit-text-stroke: 2px #000000}">Fill Passenger Details</a><br><br>
-    <div id="contain" style="padding-left:30px;font-size:25px;"/>
+    <div id="contain" style="padding-left:30px;"/>
 
 </div>
 <hr width="1000px">
 <div align="center">
-    <button type="submit" value="BOOK THE TICKET" style="border: 2px solid #6a5acd;">BOOK THE TICKET</button>&nbsp;&nbsp;&nbsp;<button type="reset" value="CANCEL"  style="border-radius: 12px solid #6a5acd;">CANCEL</button>
+    <a href="#"><button type="submit" value="BOOK THE TICKET" class="button">BOOK THE TICKET</button></a>&nbsp;&nbsp;&nbsp;
+    <button type="reset" value="CANCEL"  class="button">CANCEL</button>
 
 </div>
 
-                                               
+
+                                                <!--JAVASCRIPT BEGINS-->
 
 </body>
 </html>
