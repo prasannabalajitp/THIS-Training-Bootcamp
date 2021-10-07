@@ -77,7 +77,7 @@ function addPassengers()
         //For displaying the Female RADIO button
         var input2 = document.createElement("input");
         input2.type = "radio";
-        input2.value = "Male" + i;
+        input2.value = "Female" + i;
         container.appendChild(input2);
         container.appendChild(document.createTextNode(" Female "));
 
